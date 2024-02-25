@@ -4,14 +4,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: black;
+}
 
 
 .second_screen_wrapper{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     /* border: 2px solid red ; */
     display: flex;
     flex-wrap: wrap;
+   
 }
 
 
@@ -40,32 +44,29 @@
   
 }
 
-/* .part_1{
-    background: url("./animation/Untitled_1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-} */
-
-/* img{
-    width: 100%;
-    height: 100%;
-} */
 
 
 
-.part_4{
-    background: url("./Vid_and_gif_files/gif/674bf9b1-db71-4bd0-b2f8-f88c99894e9e.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+
+
+@media screen and (max-width:1000px)  {
+
+    h1{
+        font-size: 18px;
+    }
+    .second_screen_wrapper{
+        /* display: flex; */
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .part{
+        width: 100%;
+    }
 }
 
-/* .solarSytemInet{
-    width: 100%;
-    height: 100%;
-    border: 20px solid red ;
-} */
+
 
 
 
