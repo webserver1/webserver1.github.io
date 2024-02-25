@@ -12,7 +12,8 @@
     <div class="second_screen_wrapper">
         <div class="part part_1">
             <div class="info">
-                <h1 > Տես փոքր արբանյակի աչքերով </h1>
+                <h1 id="simulation_1"> Տես փոքր արբանյակի աչքերով </h1> 
+
             </div>
             <a href="https://satellitetraking.vercel.app/" target="_blank">
                 <video autoplay width="100%" height="100%" muted loop>
@@ -22,7 +23,7 @@
         </div>
         <div class="part part_4">
             <div class="info">
-                <h1 > Արեգակնային համակարգի կառավարումը </h1>
+                <h1  id="simulation_2"> Արեգակնային համակարգի կառավարումը </h1>
             </div>
             <a href="https://www.solarsystemscope.com/" target="_blank">
                 <!-- <div class="solarSytemInet">
@@ -36,7 +37,7 @@
      
         <div class="part part_3">
             <div class="info">
-                <h1 > Արեգակնային համակարգ </h1>
+                <h1 id="simulation_3"> Արեգակնային համակարգ </h1>
             </div>
             <a href="https://sunsystem.vercel.app/" target="_blank">
                 <video autoplay width="100%" height="100%" muted loop>
@@ -46,7 +47,7 @@
         </div>
         <div class="part part_2">
             <div class="info">
-                <h1 > Արբանյակային ուղեծրեր </h1>
+                <h1 id="simulation_4"> Արբանյակային ուղեծրեր </h1>
             </div>
             <a href="https://spaceaware.io/" target="_blank">
                 <video autoplay width="100%" height="100%" muted loop>
@@ -59,20 +60,60 @@
 
     </div>
 
+    <script>
+// Get the current date and time
+var now = new Date();
+
+// Get the timezone offset in minutes
+var timezoneOffset = now.getTimezoneOffset();
+
+// Convert the timezone offset to hours and minutes
+var timezoneOffsetHours = Math.abs(Math.floor(timezoneOffset / 60));
+var timezoneOffsetMinutes = Math.abs(timezoneOffset % 60);
+
+// Determine if the timezone offset is ahead or behind UTC
+var timezoneSign = timezoneOffset > 0 ? "-" : "+";
+
+// Format the timezone string
+var timezoneString = timezoneSign + 
+                     (timezoneOffsetHours < 10 ? '0' : '') + timezoneOffsetHours + ":" +
+                     (timezoneOffsetMinutes < 10 ? '0' : '') + timezoneOffsetMinutes;
+
+// Output the timezone
+// console.log( JSON.stringify(timezoneString));
+// console.log(JSON.stringify("+04:00"))
+
+if(JSON.stringify("+04:00") == JSON.stringify(timezoneString) ){
+    console.log("Space Minds ARM ")
+}else{
+    console.log("Space Minds USA ")
+    let s1 = document.getElementById("simulation_1");
+    s1.innerHTML = "Look through the eyes of a small satellite";
+    s1.style  = `font-size:20px;`;
+
+
+    let s2 = document.getElementById("simulation_2");
+    s2.innerHTML = "Solar system control ";
+    s2.style  = `font-size:20px;`;
+
+    let s3 = document.getElementById("simulation_3");
+    s3.innerHTML = "Solar system ";
+    s3.style  = `font-size:20px;`;
+
+    let s4 = document.getElementById("simulation_4");
+    s4.innerHTML = "Satellite orbits";
+    s4.style  = `font-size:20px;`;
+    
+
+}
+
+
+    </script>
+
 </body>
 
 </html>
 
 
 
-<!-- https://spaceaware.io/ -->
 
-<!-- http://localhost:3000/ -->
-
-
-
-<!--  -->
-
-<!-- <h1>2 - spaceaware </h1> -->
-
-<!-- <h1> Տես փոքր արբանյակի աչքերով </h1> -->
